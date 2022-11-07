@@ -1,0 +1,17 @@
+/* HEADER */
+header {
+  text-align: center;
+}
+
+.form {
+  background: rgb(228, 209, 209);
+  height: 10rem;
+}
+.form__input {
+  border: none;
+  background: rgb(228, 209, 209);
+  color: black;
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=style.css.map */
