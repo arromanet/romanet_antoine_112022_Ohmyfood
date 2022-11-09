@@ -5,20 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood!</title>
+    <title>Accueil - Ohmyfood!</title>
     <link rel="stylesheet" href="./public/css/style.css">
+    <script src="https://kit.fontawesome.com/3e125e7ba4.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <header>
         <img class="header__logo" src="./public/img/logo/ohmyfood.png" alt="Logo d'Ohmyfood!">
-        <div>
-            <form class="form">
-                <input class="form__input" placeholder="Paris, Belleville">
-            </form>
-        </div>
     </header>
+
+    <main>
+        <form class="form">
+            <div class="form__div">
+                <i class="fa-solid fa-location-dot"></i>
+                <input class="form__input" type="search" placeholder="Paris, Belleville">
+            </div>
+        </form>
+
+        <section class="reservation">
+            <h1 class="reservation__h1">Réservez le menu qui<br> vous convient</h1>
+            <p class="reservation__p">Découvrez des restaurants d'exception,<br> sélectionnés par nos soins.</p>
+            <button class="reservation__btn" type="submit">Explorez nos restaurants</button>
+        </section>
+    </main>
 
 </body>
 
