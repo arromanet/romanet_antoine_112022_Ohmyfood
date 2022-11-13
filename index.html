@@ -8,12 +8,18 @@
     <title>Accueil - Ohmyfood!</title>
     <link rel="stylesheet" href="./public/css/style.css">
     <script src="https://kit.fontawesome.com/3e125e7ba4.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
 
 </head>
 
 <body>
-    <header>
-        <img class="header__logo" src="./public/img/logo/ohmyfood.png" alt="Logo d'Ohmyfood!">
+    <header class="header">
+        <h1 class="header__logo">Ohmyfood</h1>
     </header>
 
     <main>
@@ -25,9 +31,68 @@
         </form>
 
         <section class="reservation">
-            <h1 class="reservation__h1">Réservez le menu qui<br> vous convient</h1>
+            <h2 class="reservation__h2">Réservez le menu qui<br> vous convient</h2>
             <p class="reservation__p">Découvrez des restaurants d'exception,<br> sélectionnés par nos soins.</p>
-            <button class="reservation__btn" type="submit">Explorez nos restaurants</button>
+            <button class="reservation__btn" type="submit" url="#">Explorez nos restaurants</button>
+        </section>
+
+        <section class="functioning">
+            <h2>Fonctionnement</h2>
+            <ul class="functioning__list">
+                <li class="functioning__li li-1">
+                    <span>1</span>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>Choisissez un restaurant</p>
+                </li>
+                <li class="functioning__li li-2">
+                    <span>2</span>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p>Composez votre menu</p>
+                </li>
+                <li class="functioning__li li-3">
+                    <span>3</span>
+                    <i class="fa-solid fa-store"></i>
+                    <p>Dégustez au restaurant</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <div id="restaurant_cards">
+                <article class="restaurant__card card--1">
+                    <a href="#">
+                        <img class="card__image" src="public\img\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Image de La palette du goût">
+                        <div class="card__body">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="restaurant__card card--2">
+                    <a href="#">
+                        <img class="card__image" src="public\img\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Image de La palette du goût">
+                        <div class="card__body">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="restaurant__card card--3">
+                    <a href="#">
+                        <img class="card__image" src="public\img\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Image de La palette du goût">
+                        <div class="card__body">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
         </section>
     </main>
 

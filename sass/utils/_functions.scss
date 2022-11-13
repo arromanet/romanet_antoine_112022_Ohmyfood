@@ -1,0 +1,23 @@
+// Grafikart (SASS 6/11 : Les mixins) :
+//youtube.com/watch?v=egH3cPggJbU&t=1010s
+
+$base-font-size: 16px !default;
+//variable de la @function rem/em
+
+@function strip-unit($number) {
+    @if type-of($number)=='number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+// css-tricks.com/snippets/sass/strip-unit-function
+
+@function rem($size, $base: $base-font-size) {
+    @return 1rem * $size / strip-unit($base);
+}
+
+@function em($size, $base: $base-font-size) {
+    @return 1em * $size / strip-unit($base);
+}

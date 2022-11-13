@@ -1,3 +1,6 @@
+/* BASE/ contient les fichiers qui définissent les fondations de votre site,
+par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site,
+telles que le box-sizing; */
 html {
     box-sizing: border-box;
 }
@@ -12,4 +15,5 @@ html {
 
 body {
     margin: 8px 0;
+    font-family: 'Roboto', sans-serif;
 }
