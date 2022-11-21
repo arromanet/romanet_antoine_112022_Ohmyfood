@@ -6,6 +6,7 @@
     &__title {
         font-family: 'Shrikhand', cursive;
         padding: 20px 0 0 29px;
+        margin-top: 0;
     }
 
     &__ul {
@@ -14,6 +15,19 @@
 
         .footer__li {
             margin-bottom: 10px;
+
+            &:hover {
+                color: $color-secondary;
+            }
+
+            &__contact {
+                text-decoration: none;
+                color: white;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
         }
 
         .fa-solid__ul {

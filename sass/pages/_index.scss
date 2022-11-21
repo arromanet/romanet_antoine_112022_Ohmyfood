@@ -1,6 +1,6 @@
-/* PAGES/ contient les blocs de code qui ne s’appliquent qu’à une seule page. Vous utilisez des boutons dans tout votre site,
-en revanche votre page d’accueil comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. En d’autres termes,
-pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs */
+//PAGES contient les blocs de code qui ne s’appliquent qu’à une seule page. Vous utilisez des boutons dans tout votre site,
+//en revanche votre page d’accueil comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. En d’autres termes,
+//pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs */
 h2 {
     padding-top: 20px;
     margin-left: 20px;
@@ -15,9 +15,12 @@ h2 {
 
     &__div {
         text-align: center;
+        width: max-content;
+        margin: auto;
     }
 
     &__input {
+        width: 60%;
         border: none;
         background: #eaeaea;
         color: black;
@@ -45,11 +48,14 @@ h2 {
         color: white;
         background: linear-gradient($color-secondary, $color-primary);
         padding: 0 20px;
+
+        &:hover {
+            filter: contrast(120%);
+        }
     }
 }
 
 .functioning {
-
 
     &__li {
         display: flex;
@@ -59,18 +65,29 @@ h2 {
         margin: 0 20px 27px -10px;
         border-radius: 10px;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        width: 315px;
+        position: relative;
+
+        &:hover {
+            background: rgba($color: $color-primary, $alpha: 0.5);
+        }
+
+        &--icon {
+            padding-right: 10px;
+
+            &:hover {
+                color: red;
+            }
+        }
 
         span {
-            margin-left: -90px;
+            position: absolute;
+            left: -10px;
             margin-right: 20px;
             background: $color-primary;
             border-radius: 18px;
             width: 20px;
             text-align: center;
-        }
-
-        .fa-solid {
-            padding-right: 10px;
         }
     }
 }
@@ -83,8 +100,8 @@ h2 {
 .restaurant__cards {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 1065px;
+    justify-content: space-around;
+    height: 1000px;
     align-items: center;
 }
 
@@ -93,6 +110,11 @@ h2 {
     width: 90%;
     border-radius: 20px;
     box-shadow: 0px 5px 20px #999;
+    position: relative;
+
+    &--4 {
+        margin-bottom: 30px;
+    }
 
     &__link {
         text-decoration: none;
@@ -107,6 +129,27 @@ h2 {
     }
 
     &__body {
-        padding-left: 10px;
+        padding: 10px 15px 0 10px;
+        display: flex;
+        justify-content: space-between;
+
+
+        &_h3 {
+            margin: 0;
+        }
+
+        &_icon {
+            font-size: 32px;
+        }
+    }
+
+    &__new {
+        background: #99e2d0;
+        color: #008766;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-radius: 3px;
+        padding: 10px;
     }
 }
