@@ -7,4 +7,12 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
+
+    &__btn {
+        position: absolute;
+        left: 20px;
+        color: black;
+        font-size: 1.5em;
+    }
 }

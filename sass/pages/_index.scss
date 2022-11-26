@@ -115,6 +115,13 @@ h2 {
     justify-content: space-around;
     height: 1000px;
     align-items: center;
+
+    @include tablet-desktop {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding-bottom: 30px;
+    }
 }
 
 .card {
@@ -124,8 +131,16 @@ h2 {
     box-shadow: 0px 5px 20px #999;
     position: relative;
 
+    @include tablet-desktop {
+        width: 20%;
+    }
+
     &--4 {
         margin-bottom: 30px;
+
+        @include tablet-desktop {
+            margin-bottom: 0;
+        }
     }
 
     &__link {

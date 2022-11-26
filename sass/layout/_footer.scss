@@ -9,9 +9,22 @@
         margin-top: 0;
     }
 
+    @include tablet-desktop {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
     &__ul {
         list-style: none;
         padding-left: 30px;
+
+        @include tablet-desktop {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            width: 100%;
+        }
 
         .footer__li {
             margin-bottom: 10px;
