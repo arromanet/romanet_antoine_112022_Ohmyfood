@@ -2,7 +2,6 @@
 //en revanche votre page d’accueil comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. En d’autres termes,
 //pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs */
 h2 {
-    padding-top: 20px;
     margin-left: 20px;
 }
 
@@ -56,28 +55,40 @@ h2 {
 }
 
 .functioning {
+    padding-top: 20px;
+
+    &__list {
+        text-align: -webkit-center;
+        padding-left: 0;
+        padding-bottom: 20px;
+
+        @include tablet-desktop {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
 
     &__li {
         display: flex;
         justify-content: center;
         align-items: center;
         background: #F7F7F7;
-        margin: 0 20px 27px -10px;
+        margin-bottom: 20px;
         border-radius: 10px;
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-        width: 315px;
+        width: 80%;
         position: relative;
 
+        @include tablet-desktop {
+            width: 30%;
+        }
+
         &:hover {
-            background: rgba($color: $color-primary, $alpha: 0.5);
+            background: rgba($color: $color-primary, $alpha: 0.3);
         }
 
         &--icon {
             padding-right: 10px;
-
-            &:hover {
-                color: red;
-            }
         }
 
         span {
@@ -95,6 +106,7 @@ h2 {
 // Section RESTAURANTS cards
 .section-restaurants {
     background: #F7F7F7;
+    padding: 20px 0;
 }
 
 .restaurant__cards {
