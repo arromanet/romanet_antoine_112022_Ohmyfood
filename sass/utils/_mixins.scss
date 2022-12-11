@@ -7,3 +7,49 @@ $breakpoints: (
         @content;
     }
 }
+
+@mixin gradient-btn {
+    border-radius: 50px;
+    border: none;
+    height: 3rem;
+    color: white;
+    background: linear-gradient($color-secondary, $color-primary);
+    padding: 0 20px;
+
+    &:hover {
+        filter: brightness(115%);
+        cursor: pointer;
+    }
+}
+
+@mixin heart-gradient {
+    font-size: x-large;
+
+    .fa-heart--vide {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+
+    }
+
+    .fa-heart--plein {
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        background: linear-gradient($color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover {
+        .fa-heart {
+
+            &--vide {
+                opacity: 0;
+            }
+
+            &--plein {
+                opacity: 1;
+            }
+        }
+    }
+}
