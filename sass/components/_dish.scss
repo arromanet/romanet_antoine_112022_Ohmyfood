@@ -1,0 +1,62 @@
+.dish {
+    display: flex;
+    background: white;
+    border-radius: 25px;
+    padding-left: 16px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0px 5px 10px #999;
+    overflow: hidden;
+
+
+    &__title {
+        width: 80%;
+
+        &__h4+&__p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__prize {
+        width: 20%;
+        align-self: center;
+    }
+
+    &__check {
+        color: white;
+        width: 0%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $color-tertiary;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 1s;
+
+        .fa-circle-check {
+            transform: rotate(-180deg);
+            transition: transform 1s;
+        }
+
+    }
+
+    &:hover & {
+
+
+        &__title {
+            width: 60%;
+        }
+
+        &__check {
+            width: 20%;
+            transform: scaleX(100%);
+
+            .fa-circle-check {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}

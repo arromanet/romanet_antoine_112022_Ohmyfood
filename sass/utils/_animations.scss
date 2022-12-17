@@ -1,0 +1,112 @@
+// LOADER
+@keyframes ldio-6aalti6935u {
+    0% {
+        transform: translate(12px, 80px) scale(0);
+    }
+
+    25% {
+        transform: translate(12px, 80px) scale(0);
+    }
+
+    50% {
+        transform: translate(12px, 80px) scale(1);
+    }
+
+    75% {
+        transform: translate(80px, 80px) scale(1);
+    }
+
+    100% {
+        transform: translate(148px, 80px) scale(1);
+    }
+}
+
+@keyframes ldio-6aalti6935u-r {
+    0% {
+        transform: translate(148px, 80px) scale(1);
+    }
+
+    100% {
+        transform: translate(148px, 80px) scale(0);
+    }
+}
+
+@keyframes ldio-6aalti6935u-c {
+    0% {
+        background: #9356dc
+    }
+
+    25% {
+        background: #99e2d0
+    }
+
+    50% {
+        background: #9356dc
+    }
+
+    75% {
+        background: #f47e60
+    }
+
+    100% {
+        background: #9356dc
+    }
+}
+
+.ldio-6aalti6935u div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(80px, 80px) scale(1);
+    background: #9356dc;
+    animation: ldio-6aalti6935u 1s 3 cubic-bezier(0, 0.5, 0.5, 1);
+}
+
+.ldio-6aalti6935u div:nth-child(1) {
+    background: #f47e60;
+    transform: translate(148px, 80px) scale(1);
+    animation: ldio-6aalti6935u-r 0.25s 3 cubic-bezier(0, 0.5, 0.5, 1), ldio-6aalti6935u-c 1s 3 step-start;
+}
+
+.ldio-6aalti6935u div:nth-child(2) {
+    animation-delay: -0.25s;
+    background: #9356dc;
+}
+
+.ldio-6aalti6935u div:nth-child(3) {
+    animation-delay: -0.5s;
+    background: #f47e60;
+}
+
+.ldio-6aalti6935u div:nth-child(4) {
+    animation-delay: -0.75s;
+    background: #9356dc;
+}
+
+.ldio-6aalti6935u div:nth-child(5) {
+    animation-delay: -1s;
+    background: #99e2d0;
+}
+
+.loadingio-spinner-ellipsis-oqj2cjtqmvs {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.ldio-6aalti6935u {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-6aalti6935u div {
+    box-sizing: content-box;
+}
