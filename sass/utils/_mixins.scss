@@ -8,6 +8,12 @@ $breakpoints: (
     }
 }
 
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
 @mixin gradient-btn {
     border-radius: 50px;
     border: none;

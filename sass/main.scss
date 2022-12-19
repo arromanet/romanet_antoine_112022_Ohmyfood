@@ -1,7 +1,7 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-@import './utils/animations';
+
 @import "./base/basesite";
 
 @import './layout/header';
@@ -14,3 +14,4 @@
 
 @import './components/buttons';
 @import './components/dish';
+@import './components/loader';
