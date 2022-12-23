@@ -108,16 +108,27 @@ h2 {
 .restaurant__cards {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 1116px;
     align-items: center;
 
 
-    @include tablet-desktop {
+    @include desktop {
         display: flex;
         flex-direction: row;
         height: auto;
         padding-bottom: 30px;
+    }
+
+    .card-3-4 {
+        width: 100%;
+
+        @include tablet-desktop {
+            width: 50%;
+        }
+
+        @include desktop {
+            display: flex;
+            justify-content: space-around;
+        }
     }
 }
 
@@ -127,10 +138,10 @@ h2 {
     border-radius: 20px;
     box-shadow: 0px 5px 10px #999;
     position: relative;
+    margin-top: 20px;
 
-
-    @include tablet-desktop {
-        width: 20%;
+    @include desktop {
+        width: 45%;
     }
 
     &--4 {

@@ -18,7 +18,7 @@
         position: relative;
         align-items: center;
 
-        &__h1 {
+        &__h2 {
             font-family: "Shrikhand", cursive;
         }
 
@@ -28,7 +28,18 @@
         }
     }
 
+    .menu-all {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
     .menu-section {
+        @include desktop {
+            width: 40%;
+        }
+
         &__starters {
             display: flex;
             flex-direction: column;
@@ -52,40 +63,45 @@
                 align-items: center;
             }
 
-            .dish {
+            .dish--1 {
+                animation: SlideUp 2s;
+            }
 
-                animation: SlideUp 3s;
+            .dish--2 {
+                animation: SlideUp 5s;
+            }
 
-                @keyframes SlideUp {
-                    0% {
-                        transform: translateY(200px);
-                        opacity: 0;
-                    }
+            .dish--3 {
+                animation: SlideUp 8s;
+            }
 
-                    100% {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
+
+
+            @keyframes SlideUp {
+                0% {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: scale(1);
                 }
             }
         }
+    }
 
-        &__check {
-            visibility: hidden;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-
-
-
+    &__check {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }
 
 
 
-.menu-section+.btn-order-div {
+
+.menu-all+.btn-order-div {
     text-align: center;
     padding: 30px 0;
 

@@ -177,16 +177,28 @@ h2 {
 .restaurant__cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 1116px;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .restaurant__cards {
     display: flex;
     flex-direction: row;
     height: auto;
     padding-bottom: 30px;
+  }
+}
+.restaurant__cards .card-3-4 {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__cards .card-3-4 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__cards .card-3-4 {
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -196,10 +208,11 @@ h2 {
   border-radius: 20px;
   box-shadow: 0px 5px 10px #999;
   position: relative;
+  margin-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .card {
-    width: 20%;
+    width: 45%;
   }
 }
 .card--4 {
@@ -279,7 +292,7 @@ h2 {
   position: relative;
   align-items: center;
 }
-.main-section__title__h1 {
+.main-section__title__h2 {
   font-family: "Shrikhand", cursive;
 }
 .main-section__title .coeur-div {
@@ -304,6 +317,17 @@ h2 {
 .main-section__title .coeur-div:hover .fa-heart--plein {
   opacity: 1;
 }
+@media screen and (min-width: 1024px) {
+  .main-section .menu-all {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-section .menu-section {
+    width: 40%;
+  }
+}
 .main-section .menu-section__starters {
   display: flex;
   flex-direction: column;
@@ -324,31 +348,36 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
-.main-section .menu-section__starters .dish {
-  animation: SlideUp 3s;
+.main-section .menu-section__starters .dish--1 {
+  animation: SlideUp 2s;
+}
+.main-section .menu-section__starters .dish--2 {
+  animation: SlideUp 5s;
+}
+.main-section .menu-section__starters .dish--3 {
+  animation: SlideUp 8s;
 }
 @keyframes SlideUp {
   0% {
-    transform: translateY(200px);
+    visibility: hidden;
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: scale(1);
   }
 }
-.main-section .menu-section__check {
+.main-section__check {
   visibility: hidden;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.menu-section + .btn-order-div {
+.menu-all + .btn-order-div {
   text-align: center;
   padding: 30px 0;
 }
-.menu-section + .btn-order-div .btn-order {
+.menu-all + .btn-order-div .btn-order {
   border-radius: 50px;
   border: none;
   height: 3rem;
@@ -356,7 +385,7 @@ h2 {
   background: linear-gradient(#FF79DA, #9356DC);
   padding: 0 20px;
 }
-.menu-section + .btn-order-div .btn-order:hover {
+.menu-all + .btn-order-div .btn-order:hover {
   filter: brightness(115%);
   cursor: pointer;
 }
@@ -370,12 +399,14 @@ h2 {
   position: relative;
   box-shadow: 0px 5px 10px #999;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .dish__title {
   width: 80%;
+  transition: all 1s;
 }
-.dish__title__h4 + .dish__title__p {
-  white-space: nowrap;
+.dish__title__h4, .dish__title__p {
+  transition: all 1s;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -390,20 +421,20 @@ h2 {
   justify-content: center;
   align-items: center;
   background: #99E2D0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 500ms;
+  transition: all 1s;
 }
 .dish__check .fa-circle-check {
   transform: rotate(-1turn);
-  transition: transform 500ms;
+  transition: transform 1s;
 }
 .dish:hover .dish__title {
   width: 60%;
 }
+.dish:hover .dish__title__h4, .dish:hover .dish__title__p {
+  white-space: nowrap;
+}
 .dish:hover .dish__check {
   width: 30%;
-  transform: scaleX(100%);
 }
 .dish:hover .dish__check .fa-circle-check {
   transform: rotate(0);
@@ -418,7 +449,7 @@ h2 {
   width: 100%;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.7);
-  animation: disappear 2s;
+  animation: disappear 3s;
   animation-fill-mode: forwards;
 }
 .loading-page__loader > .point {
