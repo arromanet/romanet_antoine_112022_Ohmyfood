@@ -57,7 +57,7 @@ h2 {
         flex-direction: column;
         align-items: center;
 
-        @include tablet-desktop {
+        @include tablet {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -75,7 +75,7 @@ h2 {
         width: 80%;
         position: relative;
 
-        @include tablet-desktop {
+        @include tablet {
             width: 30%;
         }
 
@@ -103,13 +103,24 @@ h2 {
 .section-restaurants {
     background: #F7F7F7;
     padding: 20px 0;
+
+    @include tablet {
+        padding: 50px 0;
+    }
+
+    @include desktop {
+        padding: 20px 0;
+    }
 }
 
 .restaurant__cards {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
 
     @include desktop {
         display: flex;
@@ -120,13 +131,17 @@ h2 {
 
     .card-3-4 {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        @include tablet-desktop {
+        @include tablet {
             width: 50%;
         }
 
         @include desktop {
             display: flex;
+            flex-direction: row;
             justify-content: space-around;
         }
     }
@@ -147,7 +162,7 @@ h2 {
     &--4 {
         margin-bottom: 30px;
 
-        @include tablet-desktop {
+        @include tablet {
             margin-bottom: 0;
         }
     }

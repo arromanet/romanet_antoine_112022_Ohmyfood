@@ -19,7 +19,6 @@
             transition: all 1s;
             overflow: hidden;
             text-overflow: ellipsis;
-
         }
     }
 
@@ -31,12 +30,10 @@
     &__check {
         color: white;
         width: 0%;
-
         display: flex;
         justify-content: center;
         align-items: center;
         background: $color-tertiary;
-
         transition: all 1s;
 
         .fa-circle-check {
@@ -47,8 +44,6 @@
     }
 
     &:hover & {
-
-
         &__title {
             width: 60%;
 

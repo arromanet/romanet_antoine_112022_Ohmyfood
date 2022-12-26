@@ -9,7 +9,7 @@
         margin-top: 0;
     }
 
-    @include tablet-desktop {
+    @include tablet {
         display: flex;
         align-items: center;
         padding: 0;
@@ -19,7 +19,7 @@
         list-style: none;
         padding-left: 30px;
 
-        @include tablet-desktop {
+        @include tablet {
             display: flex;
             justify-content: space-around;
             margin-top: 20px;
