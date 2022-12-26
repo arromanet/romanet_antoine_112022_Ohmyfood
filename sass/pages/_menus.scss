@@ -1,0 +1,114 @@
+.image-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.main-section {
+    background: #eaeaea;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: -50px;
+    position: relative;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+        position: relative;
+        align-items: center;
+
+        &__h2 {
+            font-family: "Shrikhand", cursive;
+        }
+
+        .coeur-div {
+            width: 24px;
+            @include heart-gradient
+        }
+    }
+
+    .menu-all {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .menu-section {
+
+        @include desktop {
+            width: 40%;
+        }
+
+        &__starters {
+            display: flex;
+            flex-direction: column;
+
+            &__h3 {
+                margin-bottom: 0;
+                margin-left: 20px;
+            }
+
+            &__h3-border {
+                background: $color-tertiary;
+                width: 60px;
+                height: 3px;
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+
+            &__articles {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dish--1 {
+                animation: SlideUp 1s;
+            }
+
+            .dish--2 {
+                animation: SlideUp 2s;
+            }
+
+            .dish--3 {
+                animation: SlideUp 3s;
+            }
+
+            .dish--4 {
+                animation: SlideUp 4s;
+            }
+
+
+            @keyframes SlideUp {
+                0% {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__check {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+
+.menu-all+.btn-order-div {
+    text-align: center;
+    padding: 30px 0;
+
+    .btn-order {
+        @include gradient-btn;
+    }
+}
