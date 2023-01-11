@@ -66,22 +66,19 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
 
-            .dish--1 {
-                animation: SlideUp 1s;
-            }
 
-            .dish--2 {
-                animation: SlideUp 2s;
-            }
+                &--1 {
+                    animation: SlideUp 1s;
+                }
 
-            .dish--3 {
-                animation: SlideUp 3s;
-            }
+                &--2 {
+                    animation: SlideUp 2s;
+                }
 
-            .dish--4 {
-                animation: SlideUp 4s;
+                &--3 {
+                    animation: SlideUp 3s;
+                }
             }
 
 
